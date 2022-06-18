@@ -4,9 +4,9 @@ from strings import get_string
 from PrimeMusic.misc import db
 from PrimeMusic.utils.database import (get_active_chats, get_lang,
                                        is_music_playing)
-from PrimeMusic.misc import db
-from PrimeMusic.utils.database import (get_active_chats,
-                                       is_music_playing)
+from PrimeMusic.utils.formatters import seconds_to_min
+from PrimeMusic.utils.inline import (stream_markup_timer,
+                                     telegram_markup_timer)
 
 from ..admins.callback import wrong
 
