@@ -237,23 +237,23 @@ stream_4 : "📡 **Started Streaming** 💡\n\n**🏷Title:** [{0}]({1})\n⌛️
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "🗑 Close"
-CLOSEMENU_BUTTON  : "🗑 Close Menu"
-BACK_BUTTON : "⬅ Back"
-UNBAN_BUTTON : "🗑 Unban Assistant"
+CLOSE_BUTTON  : "• Cʟᴏsᴇ​"
+CLOSEMENU_BUTTON  : "• Cʟᴏsᴇ​ Mᴇɴᴜ"
+BACK_BUTTON : "• Bᴀᴄᴋ"
+UNBAN_BUTTON : "• Uɴʙᴀɴ Assɪsᴛᴀɴᴛ"
 
 #Lyrics
 L_B_1 : "🚀 Checkout Lyrics Now"
 
 # Start
-S_B_1 : "🗒 Commands"
-S_B_2 : "🔧 Settings"
-S_B_3 : "📨 Support"
-S_B_4 : "📨 Channel"
-S_B_5 : "✚ Add me to your Group"
+S_B_1 : "🗒 Cᴏᴍᴍᴀɴᴅs"
+S_B_2 : "🔧 Sᴇᴛᴛɪɴɢ"
+S_B_3 : "📨 Sᴜᴘᴘᴏʀᴛ"
+S_B_4 : "📨 Cʜᴀɴɴᴇʟ"
+S_B_5 : "✚ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ"
 S_B_6 : "💡 Git Repo"
-S_B_7 : "👤 Bot Owner"
-S_B_8 : "🔎 How to Use? Commands Menu."
+S_B_7 : "🥷 Bᴏᴛ Oᴡɴᴇʀ"
+S_B_8 : "🔎 Hᴏᴡ Tᴏ Usᴇ? Cᴏᴍᴍᴀɴᴅs Mᴇɴᴜ."
 
 #Help 
 H_B_1 : "Admin Commands"
@@ -269,8 +269,8 @@ PM_B_2 : "InlineMarkup"
 PM_B_3 : "ChannelPlay"
 
 #Play
-P_B_1 : "🎵 Play Audio"
-P_B_2 : "🎥 Play Video"
+P_B_1 : "🎵 Pʟᴀʏ Aᴜᴅɪᴏ"
+P_B_2 : "🎥 Pʟᴀʏ Vɪᴅᴇᴏ"
 P_B_3 : "🏮 Start Live Stream"
 P_B_4 : "🎵 Play Playlist"
 
