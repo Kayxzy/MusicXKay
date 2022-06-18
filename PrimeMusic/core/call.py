@@ -433,6 +433,8 @@ class Call(PyTgCalls):
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
+                db[chat_id][0]["mystic"] = run
+                db[chat_id][0]["markup"] = "tg"
             elif "vid_" in queued:
                 mystic = await app.send_message(
                     original_chat_id, _["call_10"]
@@ -481,6 +483,8 @@ class Call(PyTgCalls):
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
+                db[chat_id][0]["mystic"] = run
+                db[chat_id][0]["markup"] = "stream"
             elif "index_" in queued:
                 stream = (
                     AudioVideoPiped(
@@ -507,6 +511,8 @@ class Call(PyTgCalls):
                     caption=_["stream_2"].format(user),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
+                db[chat_id][0]["mystic"] = run
+                db[chat_id][0]["markup"] = "tg"
             else:
                 stream = (
                     AudioVideoPiped(
@@ -538,6 +544,8 @@ class Call(PyTgCalls):
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
+                    db[chat_id][0]["mystic"] = run
+                    db[chat_id][0]["markup"] = "tg"
                 elif videoid == "soundcloud":
                     button = telegram_markup(_, chat_id)
                     run = await app.send_photo(
@@ -548,6 +556,8 @@ class Call(PyTgCalls):
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
+                    db[chat_id][0]["mystic"] = run
+                    db[chat_id][0]["markup"] = "tg"
                 else:
                     img = await gen_thumb(videoid)
                     button = stream_markup(_, vidid, chat_id)
@@ -560,6 +570,8 @@ class Call(PyTgCalls):
                         ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
+                    db[chat_id][0]["mystic"] = run
+                    db[chat_id][0]["markup"] = "stream"
 
     async def ping(self):
         pings = []
