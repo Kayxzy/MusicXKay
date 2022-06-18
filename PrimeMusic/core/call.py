@@ -424,7 +424,7 @@ class Call(PyTgCalls):
                     )
                 img = await gen_thumb(videoid)
                 button = telegram_markup(_, chat_id)
-                await app.send_photo(
+                run = await app.send_photo(
                     original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
@@ -472,7 +472,7 @@ class Call(PyTgCalls):
                 img = await gen_thumb(videoid)
                 button = stream_markup(_, vidid, chat_id)
                 await mystic.delete()
-                await app.send_photo(
+                run = await app.send_photo(
                     original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
@@ -501,7 +501,7 @@ class Call(PyTgCalls):
                         text=_["call_9"],
                     )
                 button = telegram_markup(_, chat_id)
-                await app.send_photo(
+                run = await app.send_photo(
                     original_chat_id,
                     photo=config.STREAM_IMG_URL,
                     caption=_["stream_2"].format(user),
@@ -528,7 +528,7 @@ class Call(PyTgCalls):
                     )
                 if videoid == "telegram":
                     button = telegram_markup(_, chat_id)
-                    await app.send_photo(
+                    run = await app.send_photo(
                         original_chat_id,
                         photo=config.TELEGRAM_AUDIO_URL
                         if str(streamtype) == "audio"
@@ -540,7 +540,7 @@ class Call(PyTgCalls):
                     )
                 elif videoid == "soundcloud":
                     button = telegram_markup(_, chat_id)
-                    await app.send_photo(
+                    run = await app.send_photo(
                         original_chat_id,
                         photo=config.SOUNCLOUD_IMG_URL,
                         caption=_["stream_3"].format(
