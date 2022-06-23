@@ -5,7 +5,7 @@ from PrimeMusic import app
 import config
 
 
-def ken(func):
+def kay(func):
     async def wrapper(_, message: Message):
         user_id = message.from_user.id
         user_name = message.from_user.first_name
@@ -26,7 +26,7 @@ def ken(func):
                         f"**Hay kak {rpk}, Silahkan join dulu biar bisa pake bot ini kak**",
                         disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup(
-                            [[InlineKeyboardButton("••ꜱɪʟᴀʜᴋᴀɴ ᴊᴏɪɴ••", url=link)]]
+                            [[InlineKeyboardButton("• ꜱɪʟᴀʜᴋᴀɴ ᴊᴏɪɴ •", url=link)]]
                         ),
                     )
                     await message.stop_propagation()
