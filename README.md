@@ -1,6 +1,6 @@
 <img src="https://telegra.ph/file/563668078b58a41bb84d6.jpg" align="right" width="200" height="200"/>
 
-# Music X Kay <img src="https://img.shields.io/github/v/release/Toni880/PrimeMusic?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
+# MusicXKay <img src="https://img.shields.io/github/v/release/Toni880/PrimeMusic?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
 
 [MusicXKay](https://github.com/Kayxzy/MusicXKay) is a Powerful Telegram Music+Video Bot written in Python using Pyrogram and Py-Tgcalls by which you can stream songs, video and even live streams in your group calls via various sources.
 
