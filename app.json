@@ -98,6 +98,10 @@
         "value": "",
         "required": false
       },
+      "MUST_JOIN": {
+        "description": "Isi dengan username channel atau group tanpa @ dan jadikan admin di gc atau ch tersebut untuk memaksa member join dulu untuk bisa menggunakan bot",
+        "value": "infomusickaybot"
+      },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "",
