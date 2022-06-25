@@ -159,11 +159,11 @@ async def braodcast_message(client, message, _):
         for num in assistants:
             sent = 0
             client = await get_client(num)
-            async for dialog in client.iter_dialogs():
+            async for dialog in client.get_dialogs():
                 try:
                     await client.forward_messages(
                         dialog.chat.id, y, x
-                    ) if message.reply_to_message else await client.send_message(
+                    ) if message.reply_to_message else await client.invoke_message(
                         dialog.chat.id, text=query
                     )
                     sent += 1
