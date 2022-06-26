@@ -68,7 +68,7 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 # GIT TOKEN ( if your edited repo is private)
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-MUST_JOIN = getenv("MUST_JOIN", "KayMusicSupport")
+MUST_JOIN = getenv("MUST_JOIN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
