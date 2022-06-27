@@ -62,7 +62,7 @@ async def clean_mode(client, update, users, chats):
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
     if message.reply_to_message:
-        x = message.reply_to_message_id
+        x = message.reply_to_message.message_id
         y = message.chat.id
     else:
         if len(message.command) < 2:
@@ -159,11 +159,11 @@ async def braodcast_message(client, message, _):
         for num in assistants:
             sent = 0
             client = await get_client(num)
-            async for dialog in client.get_dialogs():
+            async for dialog in client.iter_dialogs():
                 try:
                     await client.forward_messages(
                         dialog.chat.id, y, x
-                    ) if message.reply_to_message else await client.invoke_message(
+                    ) if message.reply_to_message else await client.send_message(
                         dialog.chat.id, text=query
                     )
                     sent += 1
