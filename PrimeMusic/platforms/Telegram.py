@@ -34,10 +34,10 @@ class TeleAPI:
 
     async def get_link(self, message):
         if message.chat.username:
-            link = f"https://t.me/{message.chat.username}/{message.reply_to_message.id}"
+            link = f"https://t.me/{message.chat.username}/{message.reply_to_message.message_id}"
         else:
             xf = str((message.chat.id))[4:]
-            link = f"https://t.me/c/{xf}/{message.reply_to_message.id}"
+            link = f"https://t.me/c/{xf}/{message.reply_to_message.message_id}"
         return link
 
     async def get_filename(
@@ -113,7 +113,7 @@ class TeleAPI:
                 if current == total:
                     return
                 current_time = time.time()
-                start_time = speed_counter.get(message.id)
+                start_time = speed_counter.get(message.message_id)
                 check_time = current_time - start_time
                 upl = InlineKeyboardMarkup(
                     [
@@ -125,12 +125,12 @@ class TeleAPI:
                         ]
                     ]
                 )
-                if datetime.now() > left_time.get(message.id):
+                if datetime.now() > left_time.get(message.message_id):
                     percentage = current * 100 / total
                     percentage = str(round(percentage, 2))
                     speed = current / check_time
                     eta = int((total - current) / speed)
-                    downloader[message.id] = eta
+                    downloader[message.message_id] = eta
                     eta = get_readable_time(eta)
                     if not eta:
                         eta = "0 sec"
@@ -149,11 +149,11 @@ class TeleAPI:
                     except:
                         pass
                     left_time[
-                        message.id
+                        message.message_id
                     ] = datetime.now() + timedelta(seconds=self.sleep)
 
-            speed_counter[message.id] = time.time()
-            left_time[message.id] = datetime.now()
+            speed_counter[message.message_id] = time.time()
+            left_time[message.message_id] = datetime.now()
 
             try:
                 await app.download_media(
@@ -164,7 +164,7 @@ class TeleAPI:
                 await mystic.edit_text(
                     "Successfully Downloaded.. Processing file now"
                 )
-                downloader.pop(message.id)
+                downloader.pop(message.message_id)
             except:
                 await mystic.edit_text(_["tg_2"])
 
@@ -183,9 +183,9 @@ class TeleAPI:
         task = asyncio.create_task(down_load())
         lyrical[mystic.message_id] = task
         await task
-        downloaded = downloader.get(message.id)
+        downloaded = downloader.get(message.message_id)
         if downloaded:
-            downloader.pop(message.id)
+            downloader.pop(message.message_id)
             return False
         verify = lyrical.get(mystic.message_id)
         if not verify:
