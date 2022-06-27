@@ -201,7 +201,7 @@ async def shellrunner(client, message):
             await client.send_document(
                 message.chat.id,
                 "output.txt",
-                reply_to_message_id=message.id,
+                reply_to_message_id=message.message_id,
                 caption="`Output`",
             )
             return os.remove("output.txt")
