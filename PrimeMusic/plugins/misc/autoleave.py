@@ -18,7 +18,7 @@ async def auto_leave():
             for num in assistants:
                 client = await get_client(num)
                 try:
-                    async for i in client.get_dialogs():
+                    async for i in client.iter_dialogs():
                         chat_type = i.chat.type
                         if chat_type in [
                             "supergroup",
