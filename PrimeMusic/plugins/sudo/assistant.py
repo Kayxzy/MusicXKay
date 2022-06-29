@@ -7,7 +7,7 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineQueryResultPhoto, InputTextMessageContent,
                             Message)
 
-from PrimeMusic import ASSISTANT_PREFIX, SUDOERS, app, random_assistant
+from PrimeMusic import ASSISTANT_PREFIX, sudo, app, random_assistant
 from PrimeMusic.utils.database import get_assistant, save_assistant
 from PrimeMusic.utils.assistant import get_assistant_details
 
