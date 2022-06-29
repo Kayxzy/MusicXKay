@@ -7,11 +7,11 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineQueryResultPhoto, InputTextMessageContent,
                             Message)
 
-from Yukki import ASSISTANT_PREFIX, SUDOERS, app, random_assistant
-from Yukki.Database import get_assistant, save_assistant
+from PrimeMusic import ASSISTANT_PREFIX, SUDOERS, app, random_assistant
+from PrimeMusic.utils.database import get_assistant, save_assistant
 from PrimeMusic.utils.assistant import get_assistant_details
 
-__MODULE__ = "Assistant"
+__MODULE__ = "assistant"
 __HELP__ = f"""
 
 
