@@ -23,10 +23,6 @@ API_HASH = getenv("API_HASH")
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-# Assistant Prefix needed to trigger your assistant accounts in User mode to execute your command. This can be only set as one Symbol (Special Character)
-# Example:- . or , or ! or * etc etc
-ASSISTANT_PREFIX = list(getenv("ASSISTANT_PREFIX", ".").split())
-
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
