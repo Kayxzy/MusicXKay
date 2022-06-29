@@ -9,7 +9,7 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
 
 from Yukki import ASSISTANT_PREFIX, SUDOERS, app, random_assistant
 from Yukki.Database import get_assistant, save_assistant
-from Yukki.Utilities.assistant import get_assistant_details
+from PrimeMusic.utils.assistant import get_assistant_details
 
 __MODULE__ = "Assistant"
 __HELP__ = f"""
@@ -94,7 +94,7 @@ async def assis_change(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         await message.reply_text(
-            f"**__Yukki Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
+            f"**__Prime Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
         )
         assis = {
             "saveassistant": ran_ass,
