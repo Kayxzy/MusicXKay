@@ -24,6 +24,8 @@ sudo()
 # Bot Client
 app = PrimeBot()
 
+from aiohttp import ClientSession
+
 # Assistant Client
 userbot = Userbot()
 ASS_CLI_1 = ASS_CLI_1
