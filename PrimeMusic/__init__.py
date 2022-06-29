@@ -27,6 +27,16 @@ app = PrimeBot()
 # Assistant Client
 userbot = Userbot()
 
+ASS_CLI_1 = ASS_CLI_1
+ASS_CLI_2 = ASS_CLI_2
+ASS_CLI_3 = ASS_CLI_3
+ASS_CLI_4 = ASS_CLI_4
+ASS_CLI_5 = ASS_CLI_5
+ASS_CLI_6 = ASS_CLI_6
+LOG_CLIENT = LOG_CLIENT
+aiohttpsession = ClientSession()
+
+
 from .platforms import *
 
 YouTube = YouTubeAPI()
