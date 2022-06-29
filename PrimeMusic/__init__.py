@@ -25,6 +25,9 @@ sudo()
 app = PrimeBot()
 
 from aiohttp import ClientSession
+from rich.console import Console
+
+console = Console()
 
 # Assistant Client
 userbot = Userbot()
