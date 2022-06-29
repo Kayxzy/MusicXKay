@@ -25,8 +25,11 @@ sudo()
 # Bot Client
 app = PrimeBot()
 
+import os
+import asyncio
 from aiohttp import ClientSession
 from rich.console import Console
+from rich.table import Table
 
 console = Console()
 
