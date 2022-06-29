@@ -38,8 +38,17 @@ LOG_CLIENT = LOG_CLIENT
 aiohttpsession = ClientSession()
 random_assistant = []
 
-
-      as status:
+async def initiate_bot():
+    global SUDOERS
+    os.system("clear")
+    header = Table(show_header=True, header_style="bold yellow")
+    header.add_column(
+        "\x59\x75\x6b\x6b\x69\x20\x4d\x75\x73\x69\x63\x20\x42\x6f\x74\x20\x3a\x20\x54\x68\x65\x20\x4d\x6f\x73\x74\x20\x41\x64\x76\x61\x6e\x63\x65\x64\x20\x4d\x75\x73\x69\x63\x20\x42\x6f\x74"
+    )
+    console.print(header)
+    with console.status(
+        "[magenta] Kay Music Bot Booting...",
+    ) as status:
         console.print("┌ [red]Booting Up The Clients...\n")
         await app.start()
         console.print("└ [green]Booted Bot Client")
