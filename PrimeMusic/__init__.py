@@ -5,6 +5,7 @@ from PrimeMusic.core.userbot import Userbot
 from PrimeMusic.misc import dbb, heroku, sudo
 
 from .logging import LOGGER
+from config import ASSISTANT_PREFIX
 
 # Directories
 dirr()
@@ -37,7 +38,7 @@ ASS_CLI_3 = ASS_CLI_3
 ASS_CLI_4 = ASS_CLI_4
 ASS_CLI_5 = ASS_CLI_5
 ASS_CLI_6 = ASS_CLI_6
-LOG_CLIENT = LOG_CLIENT
+ASSISTANT_PREFIX = ASSISTANT_PREFIX
 aiohttpsession = ClientSession()
 random_assistant = []
 
