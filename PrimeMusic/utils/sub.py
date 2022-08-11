@@ -25,8 +25,7 @@ def kay(func):
                     await message.reply(
                         f"**Hay kak {rpk}, Silahkan join dulu biar bisa pake bot ini kak**",
                         disable_web_page_preview=True,
-                        reply_markup=InlineKeyboardMarkup(
-                            [[InlineKeyboardButton("• ꜱɪʟᴀʜᴋᴀɴ ᴊᴏɪɴ •", url=link)]]
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("• ꜱɪʟᴀʜᴋᴀɴ ᴊᴏɪɴ •", url=link)]]
                         ),
                     )
                     await message.stop_propagation()
