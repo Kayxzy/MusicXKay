@@ -25,7 +25,6 @@ from PrimeMusic.utils.inline.play import (livestream_markup,
 from PrimeMusic.utils.inline.playlist import botplaylist_markup
 from PrimeMusic.utils.logger import play_logs
 from PrimeMusic.utils.stream.stream import stream
-from PrimeMusic.utils.sub import kay
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
