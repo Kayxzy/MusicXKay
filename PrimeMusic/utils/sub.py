@@ -1,11 +1,9 @@
 from pyrogram.errors import ChatAdminRequired, ChatWriteForbidden, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-
 from PrimeMusic import app
 
 
-BANNED_USERS = set(int(x) for x in os.getenv("BANNED_USERS", "").split())
 UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL")
 
 
@@ -14,14 +12,6 @@ def kay(_, message: Message):
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
-    if chat_id in BANNED_USERS:
-        await app.send_message(
-            chat_id,
-            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
-            reply_to_message_id=message.message_id,
-        )
-        return
-    ## Doing Force Sub 🤣
     update_channel = UPDATES_CHANNEL
     if update_channel:
         try:
