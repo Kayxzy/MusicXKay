@@ -3,7 +3,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
 from PrimeMusic import app
-import config
 
 
 BANNED_USERS = set(int(x) for x in os.getenv("BANNED_USERS", "").split())
