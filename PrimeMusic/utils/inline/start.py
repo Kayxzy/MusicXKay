@@ -10,10 +10,6 @@ def start_pannel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?start=help",
-            ),
-            InlineKeyboardButton(
                 text=_["S_B_2"], callback_data="settings_helper"
             ),
         ],
@@ -93,22 +89,4 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
         ]
     )
-    if OWNER:
-        buttons.append(
-            [
-                InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
-                InlineKeyboardButton(
-                    text=_["ST_B_6"], callback_data="LG"
-                ),
-            ]
-        )
-    else:
-        if OWNER:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=_["S_B_7"], user_id=OWNER
-                    ),
-                ]
-            )
     return buttons
