@@ -714,5 +714,4 @@ class Call(PyTgCalls):
                 autoend[chat_id] = {}
 
 
-
 Prime = Call()
